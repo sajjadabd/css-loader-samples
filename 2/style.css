@@ -1,0 +1,60 @@
+body {
+    margin : 0;
+    display : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items: center;
+    height : 100vh;
+}
+
+svg {
+    width : 120px;
+    height : 120px;
+    box-sizing: border-box;
+    position : relative;
+    animation : rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform : rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+svg circle {
+    width : 100px;
+    height : 100px;
+    box-sizing: border-box;
+    fill : none;
+    stroke : royalblue;
+    stroke-width : 10;
+    stroke-linecap: round;
+    stroke-dasharray: 320;
+    stroke-dashoffset: 320;
+    transform: translate(10px , 10px);
+    animation : complete 2s linear infinite; 
+}
+
+@keyframes complete {
+    0% , 100% {
+        stroke-dashoffset: 320;
+    }
+    50%{
+        stroke-dashoffset: 0;
+    }
+    50.01% {
+        stroke-dashoffset: 640;
+    }
+}
+
+
+
+
+div.input {
+    font-size : 1.2em;
+    display : flex;
+    flex-direction: column;
+}
